@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title th:title="${title}">Home Page</title>
+</head>
+<body>
+	
+	<!--This is a signup html file in which this section will go to the base.html file as it is the parent html file.-->
+
+	<section class="signup">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+					<!--Registration Card-->
+					
+					<div class="my-card mt-1">
+		
+						<div th:if="${param.success}">
+        					<div class="success-message">
+  								<p>Registration Successful!</p>
+							</div>
+						</div>
+						
+						<div th:if="${param.error}">
+        					<div class="error-message">
+  								<p>Invalid Username or password</p>
+							</div>
+						</div>
+		
+						<div class="container text-center">
+							<img th:src="@{/img/register.png}" th:width="80px" alt="register here" />	
+						</div>
+						
+						<h1>Register Here</h1>
+		
+					<!--Registration form-->
+		
+						<form novalidate action="" th:action="@{/do_register}" method="post" th:object="${user}">
+											
+											
+						  <!--Name field-->
+											
+												
+							<div class="form-group mb-3 ">
+								  
+							    <label for="name_field">Enter Name</label>
+							    
+							    <input type="text" 
+							    	   name="name"
+							    	   class="form-control"
+							    	   th:classappend="${#fields.hasErrors('name') ? 'is-invalid' : ''}" 
+							    	   id="name_field" 
+							    	   required
+							    	   placeholder="Enter your name....."
+							    	   autofocus
+							    	   th:value="${user.name}">
+							    
+							  </div>
+							  
+							  <div class="invalid-tooltip" th:each="e : ${#fields.errors('name')}" th:text="${e}">
+							  </div>
+							  
+							   <!--Email field-->
+												
+													
+							  <div class="form-group mb-2">
+								  
+							    <label for="email_field">Enter E-mail</label>
+							    
+							    <input type="email" 
+									   name="email"
+							    	   class="form-control" 
+							    	   id="email_field" 
+							    	   required
+							    	   placeholder="Enter your email....."
+							    	   autofocus
+							    	   th:value="${user.email}">
+							    
+							  </div>
+							  
+							  
+							  <!--Password field-->
+							  
+							  
+							  <div class="form-group mb-2">
+								  
+							    <label for="password_field">Create Password</label>
+							    
+							    <input type="password"
+							    	   class="form-control" 
+							    	   id="password_field"
+							    	   name="password" 
+							    	   placeholder="Enter your password......"
+							    	   required>
+							  </div>
+							  
+							  
+							<!--About information field of user-->
+							  
+							  
+							<div class="form-group">
+								  
+								<label for="about_field" class="form-label">About Yourself</label>
+									  
+								<textarea id="about_field"
+									  			name="about" 
+									  			rows="3" 
+									  			class="form-control"
+									  			placeholder="Input about yourself....." 
+									  			required
+									  			th:value="${user.about}">
+								</textarea>
+								  
+							</div>
+							  
+							<!--Checkboc for terms and conditions.-->
+			
+							<div class="form-group form-check text-center">
+								  
+								<input type="checkbox" 
+									name="agreement"
+								    class="form-check-input" 
+								    id="agreement">
+								<label class="form-check-label" 
+									   name="agreement"
+								       for="agreement" 
+								       required>
+								    		I Accept Terms and Conditions.
+								</label>
+							 
+							</div>
+							
+							
+							<!--Buttons of submitting form and resetting the signup form-->
+							<div class="text-center buttons">
+									<button type="submit" class="btn btn-primary btn-lg">Submit</button>
+									<button type="reset" class="btn btn-warning btn-lg ml-3">Reset</button>
+							</div>
+							
+							<div class="text-center mt-2">
+								
+                                <a href="/signin" class="btn btn-secondary btn-lg">Already Registered?</a>
+							</div>
+                           
+							
+						</form>
+					</div>	
+				</div>	
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>

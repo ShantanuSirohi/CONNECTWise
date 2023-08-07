@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${title}">Insert title here</title>
+</head>
+<body>
+	
+	<!--This is a contact html file in which this section will go to the base.html file as it is the parent html file.-->
+	
+	<section>
+		<div class="container mt-5">
+			<div class="row" style="font-family: 'Tektur', cursive;">
+				<div class="col-md-8 offset-md-2">
+					<!--Registration Card-->
+					
+					<div class="my-card mt-10">
+						
+						<h1><b>Register Here</b></h1>
+		
+					<!--Registration form-->
+		
+						<form action=""  method="post">
+											
+											
+						  <!--Name field-->
+											
+												
+							<div class="form-group mb-3 ">
+								  
+							    <label for="name_field"><b>Enter Name</b></label>
+							    
+							    <input type="text"
+							    	   class="form-control"
+							    	   id="name_field" 
+							    	   required
+							    	   placeholder="Enter your name....."
+							    	   autofocus>
+							    
+							  </div>
+							  
+							  
+							   <!--Email field-->
+												
+													
+							  <div class="form-group mb-2">
+								  
+							    <label for="email_field"><b>Enter E-mail</b></label>
+							    
+							    <input type="email" 
+							    	   class="form-control" 
+							    	   id="email_field" 
+							    	   required
+							    	   placeholder="Enter your email....."
+							    	   autofocus>
+							    
+							  </div>
+							  
+							  <!--Subject field-->
+							  
+							  <div class="form-group mb-2">
+								  
+							    <label for="subject_field"><b>Enter subject</b></label>
+							    
+							    <input type="text" 
+							    	   class="form-control" 
+							    	   id="subject_field" 
+							    	   required
+							    	   placeholder="Enter subject....."
+							    	   autofocus>
+							    
+							  </div>
+							
+							
+							
+							<!--Buttons of submitting form and resetting the signup form-->
+							<div class="text-center buttons">
+									<button type="submit" class="btn btn-primary btn-lg">Submit</button>
+									<button type="reset" class="btn btn-warning btn-lg ml-3">Reset</button>
+							</div>
+							
+						</form>
+					</div>	
+				</div>	
+			</div>
+		</div>	
+	</section>
+
+</body>
+</html>

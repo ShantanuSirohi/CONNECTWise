@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${title}">Insert title here</title>
+</head>
+<body>
+
+	<!--This is a services html file in which this section will go to the base.html file as it is the parent html file.-->
+
+	<section>
+		<div class="section">
+			<div class="title">
+				<h1 style="font-family: 'Tektur', cursive;; color:azure; font-size:30px" class="text-center">Services</h1>			
+			</div>
+			<div class="about">
+				<div class="card">
+					<div class="icon">
+						<i class="fas fa-calendar"></i>
+						<h2 style="font-family: 'Anton', sans-serif;">Contact Organization</h2>
+						<p style="font-family: 'Merriweather', serif;">Our intuitive contact management system allows you to store, update, and categorize all your contacts in one centralized location. Say goodbye to scattered contact information </p>
+						
+					</div>
+				</div>
+				<div class="card">
+					<div class="icon">
+						<i class="fas fa-wrench"></i>
+						<h2 style="font-family: 'Anton', sans-serif;">Contact Customization</h2>
+						<p style="font-family: 'Merriweather', serif;">Tailor each contact entry to suit your specific needs, making it simple to search and filter through your contacts based on relevant criteria.</p>
+						<a th:href="@{/signin}" class="button">Get Started</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="icon">
+						<i class="fas fa-handshake"></i>
+						<h2 style="font-family: 'Anton', sans-serif;">Security and Privacy</h2>
+						<p style="font-family: 'Merriweather', serif;">We understand the importance of data security and privacy. Rest assured that your contact data is protected with industry-standard encryption, and we never share your information with third parties.</p>
+						
+					</div>
+				</div>	
+			</div>
+		</div>	
+	</section>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${title}">Insert title here</title>
+</head>
+<body>
+	
+	<!--This is a about html file in which this section will go to the base.html file as it is the parent html file.-->
+
+	<section>
+		<div class="section">
+			<div class="title">
+				<h1 style="font-family: 'Tektur', cursive;; color:azure; font-size:30px" class="text-center">Discover Our Story: Empowering Connections with Smart Contact Manager</h1>			
+			</div>
+			<div class="about">
+				<div class="card">
+					<div class="icon">
+						<i class="fas fa-calendar"></i>
+						<h2 style="font-family: 'Anton', sans-serif;">About Us</h2>
+						<p style="font-family: 'Merriweather', serif;">At Smart Contact Manager, we believe that effective communication and strong relationships are at the heart of personal and professional success. Our passion for creating a seamless and efficient contact management solution led us to build a platform that simplifies the way you connect with others.</p>
+						<a th:href="@{/signup}" class="button">Get Started</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="icon">
+						<i class="fas fa-wrench"></i>
+						<h2 style="font-family: 'Anton', sans-serif;">Our Mission</h2>
+						<p style="font-family: 'Merriweather', serif;">Our mission is to empower individuals and businesses with a reliable and user-friendly contact management tool that enhances productivity and fosters meaningful connections. We understand that the modern world demands a centralized and accessible system to manage contacts efficiently. MyContactManager strives to be the go-to platform that fulfills these needs, making it easier for you to stay connected and focused on what matters most.</p>
+						<a th:href="@{/signup}" class="button">Get Started</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="icon">
+						<i class="fas fa-handshake"></i>
+						<h2 style="font-family: 'Anton', sans-serif;">Unveiling Our Purpose</h2>
+						<p style="font-family: 'Merriweather', serif;">Like many of you, we experienced the frustration of juggling multiple contact lists, trying to remember where we stored crucial information, and feeling overwhelmed by disorganized data. We knew there had to be a better way to manage contacts effectively, so we set out on a journey to create Smart Contact Manager.</p>
+						<a th:href="@{/signup}" class="button">Get Started</a>
+					</div>
+				</div>	
+			</div>
+		</div>	
+	</section>
+
+</body>
+</html>

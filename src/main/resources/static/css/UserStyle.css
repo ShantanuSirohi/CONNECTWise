@@ -1,0 +1,99 @@
+/*background color of navbar*/
+.backgroundColor{
+	background-color: rgb(103, 152, 140);
+}
+
+/*css for full body tag of the project*/
+body{
+	background-color: beige !important;
+}
+
+
+/*file for styling sidebar*/
+
+.sidebar{
+	width:20%;
+	background:rgb(64, 128, 128);
+	height:100vh;
+	position: fixed;
+	padding-top: 45px;
+	z-index: 999999999999999999999;
+}
+
+.sidebar a{
+	display: block;
+	width: 100%;
+	padding: 25px 25px;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+}
+
+.sidebar a:hover{
+	background:rgb(20, 44, 43);
+}
+
+
+.seidebar .divider{
+	height:1px;;
+	width:100%;
+	background:rgb(0, 0, 0);
+	margin-top:10px;
+}
+
+.content{
+	margin-left: 22%;
+}
+
+/*media query for sidebar responsiveness*/
+@media only screen and (max-width:600px){
+	.sidebar{
+		display:none;
+		width:80% !important;
+		background:rgb(64, 128, 128);
+		height:100vh;
+		position: fixed;
+		padding-top: 45px;
+	}
+	
+	.content{
+		margin-left: 22%;
+	}
+}
+
+/*For clossing button*/
+
+.sidebar .crossBtn{
+	position: absolute;
+	top: 0;
+	right: 35px;
+	font-size: 36px;
+	cursor: pointer;
+}
+
+
+/*add contact card background */
+
+.card{
+	background-color: cadetblue;
+}
+
+/*width and height of contact display image on the table of show contacts images*/
+
+.my_profile_picture{
+	width: 30px;
+	height:30px;
+	object-fit:cover;
+	border-radius: 50%;
+}
+
+.description {
+	font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: rgb(0, 64, 128);
+    border: 2px solid rgb(2, 119, 9);
+    border-radius: 5px;
+}
+
+

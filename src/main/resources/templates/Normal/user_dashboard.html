@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${title}">Insert title here</title>
+</head>
+<body>
+	
+	<!--This is a about html file in which this section will go to the base.html file as it is the parent html file.-->
+
+	<section>
+		
+		<div class="container ">
+			<div class="card text-center">
+				<div class="card-body mx-4 my-4">
+					<img src="" style="height: 200px; width: 200px;" class="dashboard" th:src="@{'/img/dashboard.png'}" alt="profile photo" />
+				</div>
+			</div>
+			
+			<div style="background: navajowhite;" class="card text-center mx-4 my-4">
+				<div class="card-body text-secondary">
+					<h1 class="font-italic">Start Adding your contact on cloud.....</h1>
+					
+					<div>
+						<a th:href="@{/user/add-contact}" class="btn btn-primary btn-lg btn-block text-uppercase mt-5">Add New Contact</a>						
+					</div>
+					<div>
+						<a th:href="@{/user/show-contacts/0}" class="btn btn-primary btn-lg btn-block text-uppercase mt-1">Show Contact</a>						
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</section>
+
+</body>
+</html>

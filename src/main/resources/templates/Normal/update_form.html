@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${title}">Insert title here</title>
+</head>
+<body>
+	
+	<!--This is a about html file in which this section will go to the base.html file as it is the parent html file.-->
+
+	<section>
+		<div class="col-md-8 offset-md-2">
+			<div class="card mx-auto my-auto">
+				<div class="card-body">
+					
+					<div class="container text-center">
+							<img th:src="@{/img/updateContact.png}" th:width="80px" alt="register here" />	
+					</div>
+					
+					<h1 class="text-center">Update Contact</h1>
+					<div class="container-fluid mt-1">
+						<div class="row">
+							<div class="col-md-8 offset-md-2">
+								<form action="#"
+									  th:object="${contacts}"
+									  enctype="multipart/form-data"
+									  method="POST"
+									  th:action="@{/user/process-update}"	
+									  class="mt-2"						
+								>
+									
+									<!--field used to fetch contact id to the process update handler ad c_id cannot be fetched 
+									directly and its type should be hidden because it should not be update by the user-->
+									
+									<input type="hidden" th:value="${contacts.c_id}" name="c_id"/>
+									
+									<!--FirstName field-->
+											
+										<div class="form-group mb-3 ">
+											  
+										    <label for="firstname_field">Enter First Name</label>
+										    
+										    <input type="text"
+										    	   th:value="${contacts.name}"
+										    	   class="form-control" 
+										    	   name="name"
+										    	   id="firstname_field" 
+										    	   required
+										    	   placeholder="Enter first name....."
+										    	   autofocus>
+										  </div>
+									
+									<!--LastName field-->
+											
+										<div class="form-group mb-3 ">
+											  
+										    <label for="lastname_field">Enter Last Name</label>
+										    
+										    <input type="text"
+										    	   name="nickName"
+										    	   th:value="${contacts.nickName}"
+										    	   class="form-control" 
+										    	   id="lastname_field" 
+										    	   required
+										    	   placeholder="Enter last name....."
+										    	   autofocus>
+
+										  </div>
+
+
+									<!--Work field-->
+												
+													
+										  <div class="form-group mb-3">
+											  
+										    <label for="work_field">Enter work details</label>
+										    
+										    <input type="text"
+										    	   class="form-control" 
+										    	   th:value="${contacts.work}"
+										    	   name="work"
+										    	   id="work_field" 
+										    	   required
+										    	   placeholder="Enter contact work details....."
+										    	   autofocus>
+										    
+										  </div>
+									
+									 <!--Email field-->
+												
+													
+										  <div class="form-group mb-3">
+											  
+										    <label for="email_field">Enter E-mail</label>
+										    
+										    <input type="email"
+										    	   class="form-control" 
+										    	   th:value="${contacts.email}"
+										    	   name="email"
+										    	   id="email_field" 
+										    	   required
+										    	   placeholder="Enter contact email....."
+										    	   autofocus>
+										    
+										  </div>
+									
+									<!--Phone field-->
+												
+													
+										  <div class="form-group mb-3">
+											  
+										    <label for="phone_field">Enter Phone Number</label>
+										    
+										    <input type="tel"
+										    	   class="form-control" 
+										    	   name="number"
+										    	   th:value="${contacts.number}"
+										    	   id="phone_field" 
+										    	   min="10"
+										    	   max="13"
+										    	   required
+										    	   placeholder="Enter contact phone number....."
+										    	   autofocus>
+										    
+										  </div>
+
+									<!--Contact Image-->
+									
+										
+										<div class="custom-file">
+											<input type="file" name="profileImage" />
+						
+										</div>
+										
+										<p class="text-warning">Choose a new profile pic</p>
+									
+									<div class="container text-center">
+										<img style="width: 250px;height: 250px;" class="img-fluid my_profile_picture" src="" th:src="@{'/img/'+${contacts.image_url}}" alt="" />
+									</div>
+									
+									<!--Contact description-->
+										
+										<div class="form-group mt-3">
+								  
+												<label for="description_field" class="form-label">About Yourself</label>
+									  
+												<textarea id="mytextarea" 
+													      rows="13" 
+													      th:utext="${contacts.description}"
+													      name="description"
+													  	  class="form-control"
+													  	  placeholder="Input contact description....." 
+													  	  required>
+												</textarea>
+								  
+										</div>
+
+									
+									
+									<!--Buttons of submitting form and resetting the signup form-->
+										<div class="text-center buttons mt-4">
+												<button type="submit" class="btn btn-primary">Update Contact</button>
+												<button type="reset" class="btn btn-warning">Reset</button>
+										</div>
+\
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+		<script>
+      		tinymce.init({
+        		selector: '#mytextarea'
+     	 	});
+    	</script>
+	</section>
+
+</body>
+</html>

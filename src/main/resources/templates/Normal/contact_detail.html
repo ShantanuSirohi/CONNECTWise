@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${title}">Insert title here</title>
+</head>
+<body>
+	
+	<!--This is a about html file in which this section will go to the base.html file as it is the parent html file.-->
+
+	<section>
+		
+		<div class="col-md-8 offset-md-2">
+			<div class="card mx-auto my-auto" th:if="${contacts}">
+				<div class="card-body">
+					
+					<div class="container text-center">
+						
+						<img src="" style="height: 200px; width: 200px;" class="my_profile_picture" th:src="@{'/img/'+${contacts.image_url}}" alt="profile photo" />
+						
+						<h1 th:text="${contacts.name}" class="text-center">
+							<span th:text="${contacts.nickName}"></span>
+						</h1>
+						
+							<table class="table">
+						  <thead>
+						    <tr>
+						      <th scope="col">#ID</th>
+						      <th scope="col">SCM2022<span th:text="${contacts.c_id}"></span></th>
+						      
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <th scope="row">Email</th>
+						      <td><span th:text="${contacts.email}"></span></td>
+						     
+						    </tr>
+						    
+						    
+						      <tr>
+						      <th scope="row">Phone</th>
+						      <td><span th:text="${contacts.number}"></span></td>
+						     
+						    </tr>
+						    
+						      <tr>
+						      <th scope="row">Work</th>
+						      <td><span th:text="${contacts.work}"></span></td>
+						     
+						    </tr>
+						    
+						  </tbody>
+						  
+						</table>
+						
+						<div class="description mt-3">
+							
+							<th:block th:utext="${contacts.description}"></th:block>
+							
+						</div>
+						
+						<div class="buttons mt-3">
+							<button class="btn btn-danger btn-sm bbtn-block">Delete</button>
+										  
+							<form action="" th:action="@{'/user/update-contact/'+${contacts.c_id}}" class="mt-2" method="post">
+											  
+										  	<button type="submit" class="btn btn-primary btn-sm">Update</button>
+											  
+										  </form>
+										  
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="text-center">
+				
+				<h1 th:unless="${contacts}" style="color: red;">You don't have contact with this contact id.</h1>
+				
+			</div>
+		</div>
+		
+		
+		
+		
+		
+	</section>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${title}">Insert title here</title>
+</head>
+<body>
+	
+	<!--This is a about html file in which this section will go to the base.html file as it is the parent html file.-->
+
+	<section>
+		<div class="container">
+			<div class="card text-center">
+				
+				<div class="card-body">
+					
+					<img src="" style="height: 200px; width: 200px; border:2px solid black" class="my_profile_picture" th:src="@{'/img/'+${user.imageUrl}}" alt="profile photo" />
+					
+					<h1 class="text-center" th:text="${user.name}"></h1>
+					
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope"col">#ID</th>
+								<th scope"col">SCM2022<span th:text="${user.id}"></span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope"row">Email</th>
+								<td ><span th:text="${user.email}"></span></td>
+							</tr>
+							<tr>
+								<th scope"row">Role</th>
+								<td ><span th:text="${user.role}"></span></td>
+							</tr>
+							<tr>
+								<th scope"row">Active</th>
+								<td ><span th:text="${user.status}"></span></td>
+							</tr>
+							<tr>
+								<th scope"row">About You</th>
+								<td ><span th:text="${user.about}"></span></td>
+							</tr>
+							
+						</tbody>
+						
+					</table>
+					
+				</div>
+			</div>
+			
+		</div>
+	</section>
+
+</body>
+</html>

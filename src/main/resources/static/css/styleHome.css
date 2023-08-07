@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@500&family=Handjet:wght@300&family=Merriweather:ital,wght@1,300&family=Oswald:wght@200&family=Tektur:wght@700&family=Victor+Mono:wght@100&display=swap');*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing:border-box;
+	font-family: 'Handjet', cursive;
+}
+
+.section{
+	width:100%;
+	min-height:100vh;
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.title h1{
+	text-align:center;
+	padding-top:50px;
+	font-size:42px;	
+	color: #cad2c5;
+}
+
+.title h1:after{
+	content:"";
+	height:4px;
+	width: 230px;
+	background-color:#778da9;
+	display:block;
+	margin:auto;
+}
+
+.about{
+	width:85%;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	margin:75px auto;
+	text-align:center;
+}
+
+.card{
+	width:100%;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	flex-direction:column;
+	margin:0px 20px;
+	padding:20px 20px;
+	border-radius: 10px;
+	cursor:pointer;
+    backdrop-filter: blur(12px);
+    background-color: rgba(53,79,82,.3)
+}
+
+.card h2{
+	font-size:28px;
+	color: #cad2c5;
+	margin-bottom:20px;
+}
+
+.card p{
+	font-size: 17px;
+	margin-bottom:30;
+	line-height:1.5;
+	color:#84a98c;
+}
+
+.wrapper{
+	width:100%;
+	min-height:100vh;
+	background:Linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../img/homepageBanner.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.card .button{
+	font-size:20px;
+	padding:8px 12px;
+	background-color: rgba(0,0,0,0);
+	text-decoration: none;
+	border: 2px solid black;
+	border-radius: 5px;
+	color:#fff;
+	letter-spacing:1px;
+}
+
+.card .button:hover{
+	background-color: #222;
+	transition:0.5s ease;
+}
+
+header{
+	min-height: px;
+	padding:20px 70px;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logo a{
+	font-size:45px;
+	color:#fff;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+header ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header ul li{
+	list-style: none;
+	padding: 20px 15px;
+}
+
+header ul li a{
+	color:#fff;
+	text-decoration:none;
+	font-size: 30px;
+	font-family: 'Handjet', cursive;
+}
+
+header ul li a:hover{
+	color:#8a9b55;
+	transition:0.6s ease;
+}
+
+header .toggle{
+	font-size:30px;
+	color:30px;
+	display: none;
+	cursor:pointer;
+}
+
+.content{
+	width:100%;
+	min-height:85vh;
+	display:flex;
+	justify-content: flex-start;
+	align-items:center;
+	padding:0px 70px;
+}
+.article h1{
+	color:#fff000;
+	font-size:70px;
+	margin-bottom:20px;
+	line-height:1.1;
+	font-weight: 400;
+	font-family: 'Handjet', cursive;
+}
+
+.article span{
+	color:#fff;
+	font-size:90px;
+	font-family: 'Dancing Script', cursive;
+}
+
+.article p{
+	font-size:17px;
+	color:rgb(168, 168, 168);
+	margin-top:50px;
+	margin-bottom:50px;
+	font-family: 'Merriweather', serif;
+}
+
+.article .button a{
+	font-size: 29px;
+	background-color: #624d69;
+	color:#fff;
+	text-decoration: none;
+	font-family: 'Handjet', cursive;
+	padding: 12px 30px;
+	letter-spacing: 2.5px;
+}
+
+.article .button a:hover{
+	background-color: #624d69;
+	transition: 0.6s ease;;
+}
+
+.article .social{
+	margin-top:25px;
+}
+
+.article .social a{
+	color:#fff;
+	text-decoration: none;
+	padding:0px 8px;
+	font-size: 28px;
+}
+
+article .social a:hover{
+	color:#8a9b55;
+	trasition: 0.6s ease;
+}
+
+
+
+
+@media screen and (max-width:900px){
+	.wrapper{
+		padding:0px;
+		width: 100%;
+	}
+	.header{
+		width: 100%;
+		display: flex;
+		padding: 20px 20px;
+	}
+	header .logo a{
+		font-size:30px;
+		margin-botoom:10px;
+	}
+	header ul{
+		display:none;
+		flex-direction: column;
+		justify-content: center;
+		
+	}
+	header ul li{
+		padding:12px 0px;
+	}
+	header u li a{
+		font-size:20px;
+	}
+	header .oggle{
+		display:flex;
+		z-index:1;
+	}
+	.content{
+		width:100%;
+		padding:0px 20px;
+	}
+	.article h1{
+		font-size:55px;
+	}
+	.aticle span{
+		font-size:70px;
+	}
+	.article p{
+		font-size:16px;
+	}
+	.article .button a{
+		padding:10px 28px;
+		font-size:17px;
+	}
+	.article .social a{
+		font-size:23px;
+	}
+	header ul.navbar.active{
+		top:0;
+		left:0;
+		position:fixed;
+		width:100%;
+		height:100vh;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction:column;
+		background-color:#222;
+	}
+}
+
+@media screen and (max-width:600px){
+	header .logo{
+		font-size:28px;
+		
+	}
+	.article h1{
+		font-size:40px;
+	}
+	.article span{
+		font-size:50px;
+	}
+	.article .button a{
+		padding:10px 20x;
+		font-size:15px;
+	}
+	.article .social a{
+		font-size:20px;
+	}
+}
+
+

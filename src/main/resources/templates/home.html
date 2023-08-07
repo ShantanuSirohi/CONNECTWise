@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title th:title="${title}">Home Page</title>
+</head>
+<body>
+
+
+	<!--This is a home html file in which this section will go to the base.html file as it is the parent html file.-->
+
+	<!--<section class="banner d-flex justify-content-center align-items-center">
+
+		<div class="text-center">
+			
+			<h1 class="font-weight-bold">Welcome To Contact  Manager</h1>
+			
+			<p>Start collecting your contacts in very smarter way. We provide very efficient and smarter way of handling contacts.</p>
+			
+			<a th:href="@{/signin}" class="btn backgroundColor btn-lg">Get Start</a>
+		</div>
+
+	</section>-->
+	<section>
+		<div class="content">
+			<div class="article">
+				<h1>Explore<br><span>A new way of storing contacts.</span></h1>
+				<p style="color: #8d99ae;">Organizing your contacts has never been easier. Say goodbye to scattered contact information and hello to a streamlined and efficient way of managing your connections. </p>
+				<div class="button">
+					<a th:href="@{/signin}">View More</a>
+				</div>
+				<div class="social">
+					<a href=""><i class="fab fa-facebook"></i></a>
+					<a href=""><i class="fab fa-twitter"></i></a>
+					<a href=""><i class="fab fa-instagram"></i></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+</body>
+</html>

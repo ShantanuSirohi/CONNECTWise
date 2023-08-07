@@ -1,0 +1,64 @@
+/*Custom css file*/
+
+
+/*css for full body tag of the project*/
+body{
+	background-color: beige !important;
+}
+
+
+/*background color of navbar*/
+.backgroundColor{
+	background-color: rgb(103, 152, 140);
+}
+
+
+/*css for home page*/
+.banner{
+	width: 100%;
+	height: 93vh;
+	background: Linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../img/homepageBanner.jpg);
+	background-size: cover;
+	color: azure;
+	text-align: center;
+}
+
+/*css for registration card*/
+.my-card{
+	padding:20px;
+	margin:10px;
+	text-decoration: none;
+	backdrop-filter: blur(12px);
+    background-color: rgba(53,79,82,.3);
+    color: aquamarine;
+    border-radius: 25px;
+}
+
+/*for the register successfull message*/
+
+.success-message {
+  background-color: rgb(0, 128, 0);
+  color: #fff;
+  padding: 10px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+/*for error mesage*/
+.error-message{
+  background-color: #5e057e;
+  color: #fff;
+  padding: 10px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+/* Your custom styles for the centered div */
+.centered-div {
+            
+            width: 200px;
+            height: 100px;
+            background-color: #f0f0f0;
+            text-align: center;
+            line-height: 100px;
+        }

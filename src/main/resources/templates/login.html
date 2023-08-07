@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title th:title="${title}">Home Page</title>
+</head>
+<body>
+	
+	<!--This is a login html file in which this section will go to the base.html file as it is the parent html file.-->
+
+	<section class="login">
+		
+		
+		<div class="container">
+			
+			
+			<div class="row">
+		
+				
+				<div class="col-md-8 offset-md-2 mt-5">
+		
+					<!--Login Card-->
+					
+					<div class="my-card mt-2">
+		
+						<div class="container text-center">
+							<img th:src="@{/img/login.png}" th:width="180px" alt="login here" />	
+						</div>
+						
+						<h1>Login Here</h1>
+						
+						<div th:if="${param.error}" class="alert alert-danger">
+							Invalid Username and password
+						</div>
+		
+						<div th:if="${param.logout}" class="alert alert-success">
+							You are logged out.
+						</div>
+		
+					<!--Login form-->
+		
+						<form action="" th:action="@{/signin}" method="post" th:object="${user}">
+											
+						  
+						   <!--Email field-->
+											
+												
+						  <div class="form-group mb-3">
+							  
+						    <label for="email_field">Enter E-mail</label>
+						    
+						    <input type="email" 
+								   name="username"
+						    	   class="form-control" 
+						    	   id="email_field" 
+						    	   required
+						    	   placeholder="Your email is your username....."
+						    	   autofocus  >  
+						  </div>
+						  
+						  
+						  <!--Password field-->
+						  
+						  
+						  <div class="form-group mb-3">
+							  
+						    <label for="password_field">Create Password</label>
+						    
+						    <input type="password"
+						    	   class="form-control" 
+						    	   id="password_field"
+						    	   name="password" 
+						    	   placeholder="Enter your password......"
+						    	   required />
+						  
+						  </div>
+						  
+							<div class="text-center buttons">
+								<button type="submit" class="btn btn-primary">Submit</button>
+								<button type="reset" class="btn btn-warning">Reset</button>
+							</div>
+						  	<div class="text-center">
+                                <a href="/signup" class="btn btn-secondary btn-lg mt-2">Register here</a>
+                            </div>
+						  
+						</form>
+
+					</div>
+					
+				</div>	
+				
+			</div>
+			
+			
+		</div>
+	
+	</section>
+
+</body>
+</html>
